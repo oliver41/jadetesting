@@ -1,0 +1,94 @@
+extends layouts/bootstrap_wrap 
+
+
+//- Override any config settings by appending to the config block
+append config
+  - var PageTitle = 'Bootstrap with Jade'
+  - var MetaDesc = 'Baking Bootstrap Snippets with Jade'
+  //- - var GoogleFonts = 'Open Sans'
+
+
+//- Bootswatch Theme flatly  darkly  slate  yeti
+block bootstrap
+  +bootswatch("darkly")
+
+//- block title
+  | Baking Bootstrap Snippets with Jade
+
+
+block content
+  +nav("HPT Personal Training", "dropdown_menu")
+    +nav_item( "index.html", "active" ) Home
+    +nav_item( "foundation.html" ) Foundation
+    +nav_item( "contact.html" ) Contact
+    +nav_item( "dropdown.html" ) Dropdown
+      +nav_item_dropdown( "#" )( label="Dropdown" )
+        +nav_item( "#" ) Action
+        +nav_item( "#" ) Another action
+        +nav_item( "#" ) Something else here
+        +nav_divider
+        +nav_header Nav header
+        +nav_item( "#" ) Separated link
+        +nav_item( "#" ) One more separated link
+
+  .container
+    .jumbotron
+      h1 #{PageTitle}
+      p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+      p: +button("primary", "more.htm", "large") Learn more
+
+  .container
+    .row
+      .col-md-4.col-sm-6.col-xs-12
+        +panel("Panel Heading", "default") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results.
+      .col-md-4.col-sm-6.col-xs-12
+        +panel("Panel Heading", "success") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results.
+      .col-md-4.col-sm-6.col-xs-12
+        +panel("Panel Heading", "primary") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results.
+    
+    .row.text-center
+      +button Default
+      +button("primary", "link.htm") Primary
+      +button("success", "success.html", "large") Success
+      +button("info", "info.html", "small") Info
+      +button("warning", "warning.html", "mini") Warning  
+
+  .container
+    .row
+      .col-md-12.owl-carousel
+        .person
+          img(src="http://dummyimage.com/600x400/292929/e3e3e3&text=Thank You", alt="")
+          h5 Darth
+        .person
+          img(src="http://www.lorempixum.com/600/400/sports", alt="")
+          h5 Darth
+        .person
+          img(src="http://dummyimage.com/600x400", alt="")
+          h5 Darth
+        .person
+          img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/darth-vader.jpg", alt="")
+          h5 Darth
+        .person
+          img(src="http://dummyimage.com/600x400/292929/e3e3e3&text=Holistic Training", alt="")
+          h5 Darth
+        .person
+          img(src="http://placekitten.com/g/600/400", alt="")
+          h5 Darth
+        .person
+          img(src="http://dummyimage.com/600x400", alt="")
+          h5 Darth
+        .person
+          img(src="http://www.lorempixum.com/g/600/400/sports", alt="")
+          h5 Darth
+        .person
+          img(src="http://dummyimage.com/600x400/292929/e3e3e3", alt="")
+          h5 Darth
+        .person
+          img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/darth-vader.jpg", alt="")
+          h5 Darth
+        .person
+          img(src="http://dummyimage.com/600x400", alt="")
+          h5 Darth
+        .person
+          img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/darth-vader.jpg", alt="")
+          h5 Darth

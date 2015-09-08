@@ -1,0 +1,22 @@
+include config
+
+doctype
+html( lang="de" )
+  include head.jade
+
+  body.HolyGrail
+    | <!--[if lt IE 10]>
+    |   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    | <![endif]-->
+    header.HolyGrail-header
+      .Header.Header--cozy(role="navigation")
+        include header.jade
+      
+    main.HolyGrail-body
+      include content.jade
+      
+    footer.HolyGrail-footer
+      .footer
+        include footer.jade
+    include scripts.jade
+  

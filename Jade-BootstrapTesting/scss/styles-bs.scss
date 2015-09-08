@@ -1,0 +1,11 @@
+@import "slider/owl.carousel.scss";
+@import "slider/owl.theme.default.scss";
+
+
+body, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.owl-carousel {
+	margin: 40px 0;
+}
